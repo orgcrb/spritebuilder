@@ -8,7 +8,7 @@
     <property name="srcdir" value="${basedir}/src"/>
 
     <target name="compile" depends="init" description="spritebuilder">
-      <javac destdir="${outdir}" srcdir="${srcdir}"/>
+      <javac destdir="${outdir}" srcdir="${srcdir}" debug="on"/>
     </target>
 
     <target name="init">
