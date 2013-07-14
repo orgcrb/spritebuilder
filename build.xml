@@ -13,10 +13,18 @@
 
     <target name="init">
       <mkdir dir="${outdir}"/>
+    </target>	
+
+    <target name="run" depends="compile">  
+      <java classname="org.crb.tools.BuilderMain" classpath="${outdir}" fork="yes"/>
+    </target>	
+
+    <target name="jar" depends="compile">
+      <jar destfile="spritebuilder.jar" basedir="${outdir}">
+        <manifest>
+          <attribute name="Main-Class" value="org.crb.tools.BuilderMain"/>
+        </manifest>   
+      </jar>
     </target>
-	
-	<target name="run" depends="compile">  
-		<java classname="org.crb.tools.BuilderMain" classpath="${outdir}" fork="yes"/>
-	</target>	
 	
 </project>
