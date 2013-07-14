@@ -1,3 +1,7 @@
+/**
+ * Copyright: Chris Bielak 2013
+ * @author: Chris Bielak
+ */
 package org.crb.tools;
 
 import org.crb.tools.spritebuilder.SpriteBuilder;
